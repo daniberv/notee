@@ -1,0 +1,1 @@
+npm install, npm run build - запускать через powerShell Microsoft Visual Studio Community

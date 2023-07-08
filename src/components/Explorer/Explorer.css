@@ -1,0 +1,127 @@
+.explorer {
+    display: flex;
+    position: absolute;
+    background: transparent;
+    width: 3rem;
+    height: 100%;
+    z-index: 990;
+    overflow: hidden;
+    will-change: width;
+    transition: all .2s cubic-bezier(.24, 1, 0, 1);
+    padding: 1rem;
+}
+
+.explorer.selected {
+    width: 600px;
+    background: var(--explorer-bg);
+    backdrop-filter: var(--explorer-bg-filter);
+    box-shadow: var(--exlorer-shador);
+    border-right: var(--explorer-border);
+}
+
+.explorer:hover {
+    width: 600px;
+    background: var(--explorer-bg);
+    box-shadow: var(--exlorer-shador);
+    border-right: var(--explorer-border);
+}
+
+.exporer_bottom:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.explorer:hover:after, .explorer.selected:after {
+    content: '';
+    position: absolute;
+    right: 0rem;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    z-index: 990;
+    background: var(--explorer-bg);
+}
+
+.explorer.selected .explorer_inner {
+    opacity: 1;
+}
+
+.explorer:hover .explorer_inner {
+    opacity: 1;
+}
+
+.explorer:hover .spinner-wrapper {
+    opacity: 1;
+    visibility: visible;
+}
+
+.explorer_items {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.explorer_item {
+    position: relative;
+    flex: 0 1 7.9rem;
+    background: var(--explorer-item-bg);
+    padding: 0.5rem;
+    border-radius: var(--medium-radius);
+    cursor: pointer;
+    min-height: 8rem;
+}
+
+.explorer_item:hover {
+    background: var(--explorer-item-bg-hover);
+}
+
+.__new {
+    background: transparent;
+    border: var(--explorer-new-item-border);
+}
+
+.explorer_item__title {
+    font-family: var(--heading-family);
+    text-shadow: var(--content-h1-shadow);
+    color: var(--editor-header);
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.explorer_item__body {
+    font-family: var(--body-family);
+    margin-top: 0.5rem;
+    font-size: 12px;
+}
+
+.explorer_inner {
+    width: calc(600px - 1em);
+    position: absolute;
+    top: 1rem;
+    bottom: 0;
+    opacity: 0;
+    overflow-y: auto;
+}
+
+.exporer_bottom {
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    right: 1rem;
+    display: flex;
+    padding-top: 2rem;
+    justify-content: space-between;
+    opacity: 0;
+    background: linear-gradient(0, var(--explorer-bg), transparent);
+}
+
+.themes {
+    display: flex;
+    gap: 1rem;
+    padding-right: 0.6rem;
+    padding-bottom: 1rem;
+}

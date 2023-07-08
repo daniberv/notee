@@ -1,0 +1,25 @@
+.spinner-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    width: 150px;
+    height: 150px;
+    animation: spinning82341 1s linear infinite;
+    text-align: center;
+    border-radius: 100px;
+    border-bottom: 0 solid var(--loader-secondary);
+    box-shadow: var(--loader-basic);
+    filter: blur(4px);
+}
+
+@keyframes spinning82341 {
+    to {
+        transform: rotate(360deg);
+    }
+}

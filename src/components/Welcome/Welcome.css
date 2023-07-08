@@ -1,0 +1,81 @@
+.welcome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--editor-bg);
+    font-size: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--heading-family);
+    pointer-events: none;
+    user-select: none;
+}
+
+.welcome_text {
+    color: var(--content-h1-color);
+    text-shadow: var(--content-h1-shadow);
+    border-right: 3px solid var(--content-h1-color);
+    animation: blink-caret 1s step-end infinite;
+    opacity: 0.35;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--content-h1-color)
+    }
+}
+
+.welcome_sub {
+    position: absolute;
+    color: var(--content-h1-color);
+    text-shadow: var(--content-h1-shadow);
+}
+
+.sub_one {
+    font-size: 16px;
+    opacity: 0.27;
+    top: 10rem;
+    right: 5rem;
+    filter: blur(1px);
+}
+
+.sub_two {
+    font-size: 26px;
+    opacity: 0.27;
+    top: 2rem;
+    right: 18%;
+    filter: blur(2px);
+}
+
+.sub_three {
+    font-size: 46px;
+    opacity: 0.28;
+    bottom: 3rem;
+    right: 20%;
+    filter: blur(3px);
+}
+
+.sub_four {
+    font-size: 18px;
+    opacity: 0.1;
+    bottom: 12rem;
+    right: 7vw;
+    filter: blur(1px);
+}
+
+.sub_five {
+    font-size: 32px;
+    opacity: 0.06;
+    bottom: 29rem;
+    right: 29vw;
+    filter: blur(1px);
+}
