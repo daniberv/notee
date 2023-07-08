@@ -1,1 +1,1 @@
-npm install, npm run build - запускать через powerShell Microsoft Visual Studio Community
+npm install, npm run build - run with powerShell Microsoft Visual Studio Community
